@@ -21,7 +21,7 @@ RUN npm i
 
 COPY --from=frontend-builder /app/dist /app/public
 
-EXPOSE 3000
+EXPOSE 7200
 
 CMD [ "npm", "start" ]
 

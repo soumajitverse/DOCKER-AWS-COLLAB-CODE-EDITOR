@@ -1,9 +1,10 @@
+import "dotenv/config";
 import express from "express";
 import { createServer } from "node:http";
 import { Server } from "socket.io";
 import { YSocketIO } from "y-socket.io/dist/server";
 
-const PORT = 3000;
+const PORT = process.env.PORT || 7100;
 const app = express();
 app.use(express.static("public"));
 const httpServer = createServer(app);
